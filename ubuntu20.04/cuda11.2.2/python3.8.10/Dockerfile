@@ -193,7 +193,9 @@ RUN \
     libopenmpi-dev \
     openmpi-bin \
     libomp-dev \
-    libopenblas-base && \
+    libopenblas-base \
+    # ETC
+    vim && \
     # Update git to newest version
     add-apt-repository -y ppa:git-core/ppa  && \
     apt-get update && \
