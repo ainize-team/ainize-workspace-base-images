@@ -306,6 +306,13 @@ RUN \
     # Activate and configure extensions
     jupyter contrib nbextension install --sys-prefix && \
     clean-layer.sh
+    
+## For Jupyter Branding
+COPY branding/logo.png /tmp/logo.png
+COPY branding/favicon.ico /tmp/favicon.ico
+RUN /bin/bash -c 'cp /tmp/logo.png $(python -c "import sys; print(sys.path[-1])")/notebook/static/base/images/logo.png'
+RUN /bin/bash -c 'cp /tmp/favicon.ico $(python -c "import sys; print(sys.path[-1])")/notebook/static/base/images/favicon.ico'
+RUN /bin/bash -c 'cp /tmp/favicon.ico $(python -c "import sys; print(sys.path[-1])")/notebook/static/favicon.ico'
 
 ## Install Visual Studio Code Server (Not recommended to edit)
 RUN curl -fsSL https://code-server.dev/install.sh | sh && \

@@ -307,7 +307,7 @@ RUN \
     jupyter contrib nbextension install --sys-prefix && \
     clean-layer.sh
 
-## For Notebook Branding
+## For Jupyter Branding
 COPY branding/logo.png /tmp/logo.png
 COPY branding/favicon.ico /tmp/favicon.ico
 RUN /bin/bash -c 'cp /tmp/logo.png $(python -c "import sys; print(sys.path[-1])")/notebook/static/base/images/logo.png'
