@@ -334,5 +334,3 @@ RUN \
     fi
 ENV HOME=$WORKSPACE_HOME
 WORKDIR $WORKSPACE_HOME
-
-ENTRYPOINT ["jupyter", "lab", "--NotebookApp.token=", "--ip=0.0.0.0", "--port=8888", "--allow-root"]
