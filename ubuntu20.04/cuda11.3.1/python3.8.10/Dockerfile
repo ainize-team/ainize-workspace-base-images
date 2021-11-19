@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
+FROM nvidia/cuda:11.3.1-cudnn8-devel-ubuntu20.04
 
 USER root
 
@@ -306,7 +306,7 @@ RUN \
     # Activate and configure extensions
     jupyter contrib nbextension install --sys-prefix && \
     clean-layer.sh
-
+    
 ## For Jupyter Branding
 COPY branding/logo.png /tmp/logo.png
 COPY branding/favicon.ico /tmp/favicon.ico
