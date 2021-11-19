@@ -1,9 +1,8 @@
 ## Environment
-
 - Ubuntu 20.04
 - Cuda 11.1.1
 - Python : 3.8.10
-- Jupyter Notebook
+* Jupyter Notebook and Lab
 - Visual Studio Code Server
 - ttyd
 
